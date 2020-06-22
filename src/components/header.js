@@ -1,33 +1,26 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Star from "../images/star.png"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
+  <header className="flex flex-row justify-between ">
+    <img src={Star} className="w-0 sm:w-auto h-0 sm:16 md:h-20 lg:h-24 m-0 sm:m-12" />
+    <div className="text-center m-8">
+      <h1 
+        style={{ fontFamily: `Berkahi Blackletter`}}
+        className="text-3xl sm:text-5xl lg:text-6xl"
+      >
+        {siteTitle}
       </h1>
+      <nav 
+        style={{ fontFamily: `Rats Get Fat` }}
+        className="text-xs lg:text-lg tracking-widest text-white sm:text-gray-400"
+      >
+        ~ <a className="sm:transition duration-300 ease-in-out hover:text-white" href="#">github</a> ~ <a className="sm:transition duration-300 ease-in-out hover:text-white" href="#">resume</a> ~
+      </nav>
     </div>
+    <img src={Star} className="w-0 sm:w-auto h-0 sm:16 md:h-20 lg:h-24 m-0 sm:m-12" />
   </header>
 )
 

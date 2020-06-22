@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Rats Get Fat";
+  src: url("../fonts/RatsGetFatRegular-RoW6.ttf");
+}
+
+@font-face {
+  font-family: "Berkahi Blackletter";
+  src: url("../fonts/Berkahi\ Blackletter.ttf") format("ttf"),
+    url("../fonts/Berkahi\ Blackletter.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("../fonts/RobotoMono-Regular.ttf");
+}
