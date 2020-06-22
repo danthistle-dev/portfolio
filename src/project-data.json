@@ -1,0 +1,20 @@
+{
+  "websites": [
+    {
+      "name": "Yeppoon SLSC",
+      "img": "../images/yslsc.PNG",
+      "description": "test",
+      "tags": ["wordpress"],
+      "link": "https://yeppoonslsc.com.au",
+      "source": "disabled"
+    },
+    {
+      "name": "Ava Kaydo",
+      "img": "../images/avakaydo.PNG",
+      "description": "test",
+      "tags": ["html", "css", "javascript"],
+      "link": "https://avakaydo.band",
+      "source": "https://github.com/danthistle-dev/ava-kaydo"
+    }
+  ]
+}

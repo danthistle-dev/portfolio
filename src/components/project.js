@@ -3,7 +3,9 @@ import PropTypes from "prop-types"
 
 const Project = ({ img, name, description, tags, link, source }) => (
   <div className="max-w-sm rounded overflow-hidden border-solid border-4 m-4 transition duration-500 ease-in-out transform hover:-translate-y-2">
-    <img className="w-full" src={img} alt={name}/>
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <img className="w-full" src={img} alt={name}/>
+    </a>
     <div className="px-6 py-4">
       <div className="text-xl mb-2">{name}</div>
       <p className="test-gray-700 text-base">{description}</p>
@@ -15,7 +17,7 @@ const Project = ({ img, name, description, tags, link, source }) => (
     </div>
     <div className="flex flex-row justify-around">
       <a href={link} target="_blank" rel="noopener noreferrer" className="text-center cursor-pointer p-2 mx-2 my-2 border-solid border-4 w-full transition duration-200 ease-in-out hover:text-black hover:bg-white hover:border-none">live</a>
-      <a href={source} target="_blank" rel="noopener noreferrer" className="text-center cursor-pointer p-2 mr-2 my-2 border-solid border-4 w-full transition duration-200 ease-in-out hover:text-black hover:bg-white hover:border-none">source</a>
+      <a href={source} target="_blank" rel="noopener noreferrer" className={`text-center cursor-pointer p-2 mr-2 my-2 border-solid border-4 w-full transition duration-200 ease-in-out hover:text-black hover:bg-white hover:border-none ${source === "disabled" ? "invisible" : null}`}>source</a>
     </div>
   </div>
 )
