@@ -17,7 +17,19 @@ const Header = ({ siteTitle }) => (
         style={{ fontFamily: `Rats Get Fat` }}
         className="text-xs lg:text-lg tracking-widest text-white sm:text-gray-400"
       >
-        ~ <a className="sm:transition duration-300 ease-in-out hover:text-white" href="#">github</a> ~ <a className="sm:transition duration-300 ease-in-out hover:text-white" href="#">resume</a> ~
+        ~ <a 
+          href="https://github.com/danthistle-dev"
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="sm:transition duration-300 ease-in-out hover:text-white">
+            github
+        </a> ~ <a
+          href="#"
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="sm:transition duration-300 ease-in-out hover:text-white">
+            resume
+        </a> ~
       </nav>
     </div>
     <img src={Star} className="w-0 sm:w-auto h-0 sm:16 md:h-20 lg:h-24 m-0 sm:m-12" />
