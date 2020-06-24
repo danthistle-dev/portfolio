@@ -1,44 +1,53 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Image from "./image"
 
-const Project = ({ img, name, description, tags, link, source }) => (
-  <div 
-    className="max-w-sm rounded overflow-hidden border-solid border-4 
-    m-4 bg-black bg-opacity-50 transition duration-500 ease-in-out 
-    transform hover:-translate-y-2"
-  >
-    <a href={link} target="_blank" rel="noopener noreferrer">
-      <img className="w-full" src={img} alt={name}/>
-    </a>
-    <div className="px-6 py-4">
-      <div className="text-xl mb-2">{name}</div>
-      <p className="test-gray-700 text-base">{description}</p>
+const Project = ({ id, name, description, tags, link, source }) => {
+
+  // const getImage = name => {
+  //   if (name === "Yeppoon SLSC") return YSYCImage;
+  //   if (name === "Ava Kaydo") return AvaKaydoImage;
+  // }
+
+  return (
+    <div 
+      className="max-w-sm rounded overflow-hidden border-solid border-4 
+      m-4 bg-black bg-opacity-50 transition duration-500 ease-in-out 
+      transform hover:-translate-y-2"
+    >
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <Image id={id} />
+      </a>
+      <div className="px-6 py-4">
+        <div className="text-xl mb-2">{name}</div>
+        <p className="test-gray-700 text-base">{description}</p>
+      </div>
+      <div className="px-6 py-4">
+        {tags.map(tag =>(
+          <span className="inline-block rounded bg-gray-300 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 sm:mb-0">{tag}</span>
+        ))}
+      </div>
+      <div className="flex flex-row justify-around">
+        <a 
+          href={link} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-center cursor-pointer p-2 mx-2 my-2 border-solid border-4 
+          w-full transition duration-200 ease-in-out hover:text-black hover:bg-white 
+          hover:border-none"
+        >live</a>
+        <a 
+          href={source} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className={`text-center cursor-pointer p-2 mr-2 my-2 border-solid border-4 
+          w-full transition duration-200 ease-in-out hover:text-black hover:bg-white 
+          hover:border-none ${source === "disabled" ? "invisible" : null}`}
+        >source</a>
+      </div>
     </div>
-    <div className="px-6 py-4">
-      {tags.map(tag =>(
-        <span className="inline-block rounded bg-gray-300 px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{tag}</span>
-      ))}
-    </div>
-    <div className="flex flex-row justify-around">
-      <a 
-        href={link} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        className="text-center cursor-pointer p-2 mx-2 my-2 border-solid border-4 
-        w-full transition duration-200 ease-in-out hover:text-black hover:bg-white 
-        hover:border-none"
-      >live</a>
-      <a 
-        href={source} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        className={`text-center cursor-pointer p-2 mr-2 my-2 border-solid border-4 
-        w-full transition duration-200 ease-in-out hover:text-black hover:bg-white 
-        hover:border-none ${source === "disabled" ? "invisible" : null}`}
-      >source</a>
-    </div>
-  </div>
-)
+  )
+}
 
 Project.propTypes = {
   img: PropTypes.string,

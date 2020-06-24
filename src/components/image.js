@@ -13,20 +13,31 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
+const Image = id => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      yslscImage: file(relativePath: { eq: "yslsc.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 400, maxHeight: 300) {
             ...GatsbyImageSharpFluid
           }
         }
-      }
+      },
+      avaKaydoImage: file(relativePath: { eq: "avakaydo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, maxHeight: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
     }
   `)
-
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  
+  if (id.id === 0) {
+    return <Img className="w-full" fluid={data.yslscImage.childImageSharp.fluid} alt="Yeppoon SLSC website screen" />
+  } else if (id.id === 1) {
+    return <Img className="w-full" fluid={data.avaKaydoImage.childImageSharp.fluid} alt="Ava Kaydo website screen" />
+  } else return <img className="w-full" src="https://via.placeholder.com/400x300" alt="placeholder" />
 }
 
 export default Image

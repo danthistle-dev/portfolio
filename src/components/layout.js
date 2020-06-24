@@ -30,10 +30,12 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="container mx-auto px-4">
         <main>{children}</main>
-        <footer>
+        <footer className="m-4 pt-24 text-gray-600">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
+          {` and `}
+          <a href="https://www.tailwindcss.com">Tailwind CSS</a>
         </footer>
       </div>
     </>
