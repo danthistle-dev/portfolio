@@ -16,6 +16,13 @@ import Img from "gatsby-image"
 const Image = id => {
   const data = useStaticQuery(graphql`
     query {
+      divybeImage: file(relativePath: { eq: "divybe.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, maxHeight: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       yslscImage: file(relativePath: { eq: "yslsc.png" }) {
         childImageSharp {
           fluid(maxWidth: 400, maxHeight: 300) {
@@ -37,6 +44,8 @@ const Image = id => {
     return <Img className="w-full" fluid={data.yslscImage.childImageSharp.fluid} alt="Yeppoon SLSC website screen" />
   } else if (id.id === 1) {
     return <Img className="w-full" fluid={data.avaKaydoImage.childImageSharp.fluid} alt="Ava Kaydo website screen" />
+  } else if (id.id === 2) {
+    return <Img className="w-full" fluid={data.divybeImage.childImageSharp.fluid} alt="Divybe logo" />
   } else return <img className="w-full" src="https://via.placeholder.com/400x300" alt="placeholder" />
 }
 

@@ -22,12 +22,12 @@ const Project = ({ id, name, description, tags, link, source }) => {
         <div className="text-xl mb-2">{name}</div>
         <p className="test-gray-700 text-base">{description}</p>
       </div>
-      <div className="px-6 py-4">
+      <div className="px-6 py-4 h-30 md:h-24">
         {tags.map(tag =>(
-          <span className="inline-block rounded bg-gray-300 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 sm:mb-0">{tag}</span>
+          <span className="inline-block rounded bg-gray-300 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tag}</span>
         ))}
       </div>
-      <div className="flex flex-row justify-around">
+      <div className="flex flex-row justify-around mt-auto">
         <a 
           href={link} 
           target="_blank" 

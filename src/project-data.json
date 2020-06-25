@@ -15,6 +15,13 @@
       "tags": ["html", "css", "javascript"],
       "link": "https://avakaydo.band",
       "source": "https://github.com/danthistle-dev/ava-kaydo"
+    },
+    {
+      "name": "Divybe",
+      "description": "test",
+      "tags": ["react", "pwa", "styled-components", "graphql", "apollo", "firebase"],
+      "link": "https://divybe.com",
+      "source": "https://github.com/danthistle-dev"
     }
   ]
 }

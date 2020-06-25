@@ -13,7 +13,13 @@ const IndexPage = () => (
     </section>
     <h1 className="text-xl px-2 bg-black bg-opacity-50 sm:bg-transparent mt-2">Fullstack Projects</h1>
     <section className="flex flex-wrap justify-center">
-      <Project />
+      <Project
+        name={data.websites[2].name}
+        tags={data.websites[2].tags}
+        link={data.websites[2].link}
+        source={data.websites[2].source}
+        id={2}
+      />
       <Project />
       <Project />
     </section>
