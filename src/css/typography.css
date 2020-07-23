@@ -4,9 +4,8 @@
 }
 
 @font-face {
-  font-family: "Berkahi Blackletter";
-  src: url("../fonts/Berkahi\ Blackletter.ttf") format("ttf"),
-    url("../fonts/Berkahi\ Blackletter.otf") format("otf");
+  font-family: "Berkahi-Blackletter";
+  src: url("../fonts/Berkahi-Blackletter.ttf");
 }
 
 @font-face {

@@ -22,6 +22,13 @@
       "tags": ["react", "pwa", "styled-components", "graphql", "apollo", "firebase"],
       "link": "https://divybe.com",
       "source": "https://github.com/danthistle-dev"
+    },
+    {
+      "name": "Voyak",
+      "description": "test",
+      "tags": ["react", "next.js", "css modules"],
+      "link": "https://voyak.com.au",
+      "source": "disabled"
     }
   ]
 }

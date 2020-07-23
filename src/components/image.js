@@ -46,7 +46,7 @@ const Image = id => {
     return <Img className="w-full" fluid={data.avaKaydoImage.childImageSharp.fluid} alt="Ava Kaydo website screen" />
   } else if (id.id === 2) {
     return <Img className="w-full" fluid={data.divybeImage.childImageSharp.fluid} alt="Divybe logo" />
-  } else return <img className="w-full" src="https://via.placeholder.com/400x300" alt="placeholder" />
+  } else return <img className="w-full" width="400" height="300" src="https://via.placeholder.com/400x300" alt="placeholder" />
 }
 
 export default Image

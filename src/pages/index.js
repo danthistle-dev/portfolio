@@ -20,7 +20,13 @@ const IndexPage = () => (
         source={data.websites[2].source}
         id={2}
       />
-      <Project />
+      <Project 
+        name={data.websites[3].name}
+        tags={data.websites[3].tags}
+        link={data.websites[3].link}
+        source={data.websites[3].source}
+        id={3}
+      />
       <Project />
     </section>
     <br />
