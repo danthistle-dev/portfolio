@@ -19,16 +19,47 @@
     {
       "name": "Divybe",
       "description": "test",
-      "tags": ["react", "pwa", "styled-components", "graphql", "apollo", "firebase"],
+      "tags": [
+        "react",
+        "pwa",
+        "styled-components",
+        "graphql",
+        "apollo",
+        "firebase"
+      ],
       "link": "https://divybe.com",
       "source": "https://github.com/danthistle-dev"
     },
     {
       "name": "Voyak",
-      "description": "test",
-      "tags": ["react", "next.js", "css modules"],
+      "img": "../images/voyak.png",
+      "description": "The public facing app of Australian accommodation booking platform Voyak. Users can search for and book accommodation. Fully responsive for a native app experience on small devices.",
+      "tags": ["react", "next.js", "css modules", "material ui"],
       "link": "https://voyak.com.au",
       "source": "disabled"
+    },
+    {
+      "name": "Voyak dashboard",
+      "description": "test",
+      "tags": ["react", "next.js", "chakra ui", "typescript"],
+      "link": "https://dashboard.voyak.com.au",
+      "source": "disabled"
+    },
+    {
+      "name": "OSRS Item Icons",
+      "img": "../images/osrs.PNG",
+      "description": "A web app that allows the user to select and download any item icons from Old School RuneScape. This app uses the publicly available osrsbox API. Try searching 'Abyssal whip'.",
+      "tags": ["react", "css modules", "typescript"],
+      "link": "https://osrs-item-icons.netlify.app",
+      "source": "https://github.com/danthistle-dev/osrs-item-icons"
+    },
+    {
+      "name": "JSPad",
+      "img": "../images/JSPad.png",
+      "description": "An in-browser JavaScript and Markdown editor. Contains support for dynamically importing most libraries from NPM. Uses a CLI and local node server to allow for data persistence.",
+      "tags": ["react", "redux", "typescript"],
+      "link": "https://www.npmjs.com/package/jspad",
+      "source": "https://github.com/danthistle-dev/jspad"
     }
   ]
 }

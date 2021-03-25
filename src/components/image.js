@@ -22,31 +22,103 @@ const Image = id => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
+      }
       yslscImage: file(relativePath: { eq: "yslsc.png" }) {
         childImageSharp {
           fluid(maxWidth: 400, maxHeight: 300) {
             ...GatsbyImageSharpFluid
           }
         }
-      },
+      }
       avaKaydoImage: file(relativePath: { eq: "avakaydo.png" }) {
         childImageSharp {
           fluid(maxWidth: 400, maxHeight: 300) {
             ...GatsbyImageSharpFluid
           }
         }
-      },
+      }
+      osrsImage: file(relativePath: { eq: "osrs.PNG" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, maxHeight: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      voyakImage: file(relativePath: { eq: "voyak.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, maxHeight: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      jspadImage: file(relativePath: { eq: "JSPad.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, maxHeight: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
-  
+
   if (id.id === 0) {
-    return <Img className="w-full" fluid={data.yslscImage.childImageSharp.fluid} alt="Yeppoon SLSC website screen" />
+    return (
+      <Img
+        className="w-full"
+        fluid={data.yslscImage.childImageSharp.fluid}
+        alt="Yeppoon SLSC website screen"
+      />
+    )
   } else if (id.id === 1) {
-    return <Img className="w-full" fluid={data.avaKaydoImage.childImageSharp.fluid} alt="Ava Kaydo website screen" />
+    return (
+      <Img
+        className="w-full"
+        fluid={data.avaKaydoImage.childImageSharp.fluid}
+        alt="Ava Kaydo website screen"
+      />
+    )
   } else if (id.id === 2) {
-    return <Img className="w-full" fluid={data.divybeImage.childImageSharp.fluid} alt="Divybe logo" />
-  } else return <img className="w-full" width="400" height="300" src="https://via.placeholder.com/400x300" alt="placeholder" />
+    return (
+      <Img
+        className="w-full"
+        fluid={data.divybeImage.childImageSharp.fluid}
+        alt="Divybe logo"
+      />
+    )
+  } else if (id.id === 3) {
+    return (
+      <Img
+        className="w-full"
+        fluid={data.voyakImage.childImageSharp.fluid}
+        alt="Voyak logo"
+      />
+    )
+  } else if (id.id === 4) {
+    return (
+      <Img
+        className="w-full"
+        fluid={data.osrsImage.childImageSharp.fluid}
+        alt="OSRS Item Icons website screen"
+      />
+    )
+  } else if (id.id === 6) {
+    return (
+      <Img
+        className="w-full"
+        fluid={data.jspadImage.childImageSharp.fluid}
+        alt="JSPad logo"
+      />
+    )
+  } else
+    return (
+      <img
+        className="w-full"
+        width="400"
+        height="300"
+        src="https://via.placeholder.com/400x300"
+        alt="placeholder"
+      />
+    )
 }
 
 export default Image
